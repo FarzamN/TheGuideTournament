@@ -1,11 +1,4 @@
-import {
-  Login,
-  OverBoard,
-  Register,
-  ForgetPassword,
-  OtpScreen,
-  ChangePassword,
-} from '../Screens/Authentication';
+import {Login, Register} from '../screen/auth';
 
 export const OverboardButton = [
   {title: 'Get Started', path: 'register', reverse: true},
@@ -39,11 +32,7 @@ export const RegisterInput = [
   },
 ];
 
-export const AuthNav = [
-  {n: 'OverBoard', c: OverBoard},
+export const AuthArr = [
   {n: 'login', c: Login},
   {n: 'register', c: Register},
-  {n: 'ForgetPassword', c: ForgetPassword},
-  {n: 'otpScreen', c: OtpScreen},
-  {n: 'changePassword', c: ChangePassword},
 ];

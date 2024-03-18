@@ -10,16 +10,9 @@ export interface Route {
   data?: object;
 }
 
-export interface navigationInterface {
+export interface nif {
   navigation: Navigation;
   route: any;
-}
-
-export interface KeyboardProps {
-  onPressKey: (value: string) => void;
-  onDelete: () => void;
-  onDone: () => void;
-  visible?: boolean;
 }
 
 export interface AuthInterface {

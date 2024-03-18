@@ -4,7 +4,7 @@ import {Color} from './Color';
 export const GlobalStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Color.Blue,
+    backgroundColor: Color.Sky,
   },
   full: {
     width: '100%',
@@ -58,8 +58,7 @@ export const GlobalStyle = StyleSheet.create({
     marginTop: 6,
   },
   Padding: {
-    width: '95%',
-    alignSelf: 'center',
+    paddingHorizontal: 15,
   },
 
   Vertical_Space: {

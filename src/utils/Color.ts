@@ -1,8 +1,8 @@
 export const Color = {
-  Sky: '#39A8DB',
+  Sky: '#2D76F0',
   White: '#fff',
   Black: '#000',
-  placeholderTextColor: '#E3E4E7',
+  placeholderTextColor: '#141824',
   Non: 'transparent',
   Yellow: '#ECB365',
   Red: '#B60909',
@@ -11,6 +11,6 @@ export const Color = {
   LightGreen: '#50C878',
   Success: '#198754',
   ThemeGrey: '#3D4663',
-  Blue: '#00082C',
+  Blue: '#094AA3',
   Ash: '#141824',
 };

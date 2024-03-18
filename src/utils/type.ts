@@ -1,4 +1,4 @@
-import {ReactNode} from 'react';
+import {ReactNode, ReactElement} from 'react';
 import {
   ImageSourcePropType,
   ImageStyle,
@@ -7,25 +7,15 @@ import {
   ViewStyle,
 } from 'react-native';
 import {Control, FieldValues, RegisterOptions} from 'react-hook-form';
-import {TextInputLabelProp} from 'react-native-paper/lib/typescript/components/TextInput/types';
 
 export type CustomButtonProps = {
   onPress?: () => void;
   loader?: boolean;
   style?: ViewStyle;
   disabled?: boolean;
-  white?: boolean;
-  to?: boolean;
-  icon?: boolean;
   isMarginTop?: boolean;
-  Google?: boolean;
   marginTop?: number | 'auto' | `${number}%`;
-  round?: boolean;
-  small?: boolean;
   title: string;
-  name?: any;
-  type?: any;
-  color?: string;
   textRestyle?: false | ViewStyle | TextStyle;
 };
 
@@ -34,11 +24,6 @@ export type BodyProps = {
   style?: ViewStyle;
 };
 
-export type ImageBackgroundType = {
-  children: ReactNode;
-  // source: ImageSourcePropType;
-  between?: boolean;
-};
 export type HeadingType = {
   text: string;
   style?: TextStyle;
@@ -54,22 +39,16 @@ export type MainInputType = {
   control?: Control<FieldValues>;
   rules?: RegisterOptions;
   onFocus?: () => void;
-  multiline?: boolean;
   placeholder?: string;
   keyboardType?: KeyboardTypeOptions;
   password?: boolean;
-  label?: TextInputLabelProp;
+  label?: string | ReactElement;
   maxLength?: number | undefined;
   restyle?: TextStyle;
-  icon?: any;
-  isIcon?: boolean;
-  isError?: boolean | object;
-  message?: string | object | any;
-  outlined?: boolean;
 };
 
 export type ValidationType = {
-  isError: boolean | object;
+  isError: boolean | object | undefined;
   message: string | object | any;
 };
 export type ImageType = {
@@ -89,15 +68,6 @@ export type FullImageType = {
   source: ImageSourcePropType;
   ImageStyle?: ImageStyle;
   radius?: number;
-};
-
-export type AuthBodyType = {
-  heading: string;
-  sub: string;
-  title?: string | object;
-  children: ReactNode;
-  onPress?: () => void;
-  noButton?: boolean;
 };
 
 export type loaderType = {
