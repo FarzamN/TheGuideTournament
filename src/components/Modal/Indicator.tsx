@@ -1,11 +1,11 @@
 import {View, Text} from 'react-native';
 import React, {FC} from 'react';
-import {loaderType} from '../../Utils/type';
+import {IndicatorType} from '../../Utils/type';
 import Modal from 'react-native-modal';
 import LottieView from 'lottie-react-native';
 import {styles} from './style';
 
-const Loader: FC<loaderType> = props => {
+const Indicator: FC<IndicatorType> = props => {
   const {visible, isError, message} = props;
   return (
     <Modal animationIn={'fadeIn'} animationOut={'fadeOut'} isVisible={visible}>
@@ -31,4 +31,4 @@ const Loader: FC<loaderType> = props => {
   );
 };
 
-export default Loader;
+export default Indicator;

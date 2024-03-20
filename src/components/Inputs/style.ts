@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {width} from '../../utils/Constants';
 import {Color} from '../../utils/Color';
+import {Font} from '../../utils/font';
 
 export default StyleSheet.create({
   InputStyles: {
@@ -8,7 +9,7 @@ export default StyleSheet.create({
     backgroundColor: Color.Non,
     alignSelf: 'center',
     color: Color.Black,
-    fontWeight: '500',
+    fontFamily: Font.font500,
     fontSize: 16,
     borderRadius: 15,
   },

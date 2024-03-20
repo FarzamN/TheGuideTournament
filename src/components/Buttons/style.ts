@@ -1,25 +1,26 @@
 import {StyleSheet} from 'react-native';
 import {Color} from '../../utils/Color';
+import {Font} from '../../utils/font';
 
 export default StyleSheet.create({
   containerStyle: {
-    // justifyContent: 'center',
-    marginTop: 10,
+    width: '100%',
+    justifyContent: 'center',
+    borderRadius: 20,
+    marginTop: 5,
     alignSelf: 'center',
-    // height: 40,
-    // overflow: 'hidden',
+
+    height: 52,
   },
   loading: {
-    top: 2,
     fontSize: 16,
     marginLeft: 10,
     color: Color.White,
-    fontWeight: '400',
+    fontFamily: Font.font500,
   },
   title: {
-    top: 1,
-    fontSize: 15,
-    fontWeight: '600',
+    fontSize: 17,
+    fontFamily: Font.font600,
     textTransform: 'capitalize',
   },
 });

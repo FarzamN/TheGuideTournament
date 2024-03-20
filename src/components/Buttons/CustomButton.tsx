@@ -1,38 +1,24 @@
-import {Text, ActivityIndicator, View} from 'react-native';
+import {Text, ActivityIndicator, View, TouchableOpacity} from 'react-native';
 import React, {FC} from 'react';
 import styles from './style';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 import {CustomButtonProps} from '../../utils/type';
-import AwesomeButton from 'react-native-really-awesome-button';
 import {Color} from '../../utils/Color';
-import {width} from '../../utils/Constants';
 
 const CustomButton: FC<CustomButtonProps> = props => {
-  const {
-    onPress,
-    loader,
-    style,
-    disabled,
-    title,
-    marginTop,
-    isMarginTop,
-    textRestyle,
-  } = props;
-  const back = loader ? Color.Grey : Color.Blue;
+  const {onPress, loader, style, disabled, title, textRestyle} = props;
 
   return (
-    <AwesomeButton
-      raiseLevel={5}
+    <TouchableOpacity
+      disabled={disabled}
       onPress={onPress}
-      disabled={disabled ? disabled : loader}
-      borderRadius={20}
-      height={55}
-      backgroundDarker={back}
-      backgroundColor={back}
-      width={width - 30}
       style={[
         styles.containerStyle,
-        {marginTop: isMarginTop ? marginTop : 12},
+        GlobalStyle.row,
+        {
+          transform: [{scale: loader ? 0.95 : 1}],
+          backgroundColor: loader ? Color.Grey : Color.Blue,
+        },
         style,
       ]}>
       <View style={GlobalStyle.row}>
@@ -53,8 +39,11 @@ const CustomButton: FC<CustomButtonProps> = props => {
           {loader ? 'Loading...' : title}
         </Text>
       </View>
-    </AwesomeButton>
+    </TouchableOpacity>
   );
 };
+{
+  /*  */
+}
 
 export default CustomButton;

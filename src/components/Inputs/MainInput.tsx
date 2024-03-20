@@ -9,7 +9,6 @@ import {
   RegisterOptions,
 } from 'react-hook-form';
 import {MainInputType} from '../../Utils/type';
-import {Validation} from '..';
 import {Color} from '../../utils/Color';
 import Icon, {IconType} from 'react-native-dynamic-vector-icons';
 import {GlobalStyle} from '../../utils/GlobalStyle';
@@ -27,6 +26,7 @@ const MainInput: FC<MainInputType> = forwardRef(
       keyboardType,
       password,
       maxLength,
+      autoFocus,
     } = props;
 
     const [show, setShow] = useState<boolean>(true);
@@ -41,6 +41,7 @@ const MainInput: FC<MainInputType> = forwardRef(
     return (
       <View style={[style.MainInputBox, GlobalStyle.row]}>
         <TextInput
+          autoFocus={autoFocus}
           ref={ref}
           value={field.value}
           onFocus={onFocus}
@@ -59,12 +60,12 @@ const MainInput: FC<MainInputType> = forwardRef(
           secureTextEntry={password ? show : false}
         />
         {password && (
-          <TouchableOpacity onPress={() => setShow(!show)}>
+          <TouchableOpacity onPress={() => setShow(pre => !pre)}>
             <Icon
               type={IconType.Entypo}
               size={20}
               color={Color.Black}
-              name={show ? 'eye' : 'eye'}
+              name={show ? 'eye' : 'eye-with-line'}
             />
           </TouchableOpacity>
         )}

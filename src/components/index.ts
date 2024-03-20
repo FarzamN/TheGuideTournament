@@ -8,7 +8,8 @@ import Validation from './Helper/Validation';
 import SelectImage from './Helper/SelectImage';
 import ImagePickerModal from './Modal/ImagePickerModal';
 import FullImage from './Helper/FullImage';
-import Loader from './Modal/Loader';
+import Indicator from './Modal/Indicator';
+import MainHeader from './Header/MainHeader';
 
 export {
   Body,
@@ -21,5 +22,6 @@ export {
   SelectImage,
   ImagePickerModal,
   FullImage,
-  Loader,
+  Indicator,
+  MainHeader,
 };

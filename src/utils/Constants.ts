@@ -26,6 +26,6 @@ export const emailPattern = {
   message: 'Email is not valid',
 };
 
-export const required = (type: any) => {
+export const required = (type: string) => {
   return `${type} is Required`;
 };

@@ -69,4 +69,7 @@ export const GlobalStyle = StyleSheet.create({
   ripple: {
     color: Color.Yellow,
   },
+  height: {
+    height: 30,
+  },
 });

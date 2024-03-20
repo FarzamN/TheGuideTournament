@@ -4,13 +4,21 @@ import {BodyProps} from '../../utils/type';
 import {GlobalStyle} from '../../utils/GlobalStyle';
 import {Color} from '../../utils/Color';
 
-const Body: FC<BodyProps> = ({children, style}) => {
+const Body: FC<BodyProps> = props => {
+  const {children, style, whiteBar, blue} = props;
   return (
-    <SafeAreaView style={[GlobalStyle.container, style]}>
-      <StatusBar backgroundColor={Color.Sky} />
+    <SafeAreaView
+      style={[
+        GlobalStyle.container,
+        {backgroundColor: blue ? Color.DarkBlue : Color.Sky},
+        style,
+      ]}>
+      <StatusBar
+        backgroundColor={whiteBar ? Color.White : Color.Sky}
+        barStyle={whiteBar ? 'dark-content' : 'light-content'}
+      />
       {children}
     </SafeAreaView>
   );
 };
-
 export default Body;

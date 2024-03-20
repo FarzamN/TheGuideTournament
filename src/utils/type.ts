@@ -3,6 +3,7 @@ import {
   ImageSourcePropType,
   ImageStyle,
   KeyboardTypeOptions,
+  StyleProp,
   TextStyle,
   ViewStyle,
 } from 'react-native';
@@ -11,10 +12,8 @@ import {Control, FieldValues, RegisterOptions} from 'react-hook-form';
 export type CustomButtonProps = {
   onPress?: () => void;
   loader?: boolean;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
   disabled?: boolean;
-  isMarginTop?: boolean;
-  marginTop?: number | 'auto' | `${number}%`;
   title: string;
   textRestyle?: false | ViewStyle | TextStyle;
 };
@@ -22,6 +21,8 @@ export type CustomButtonProps = {
 export type BodyProps = {
   children: ReactNode;
   style?: ViewStyle;
+  whiteBar?: boolean;
+  blue?: boolean;
 };
 
 export type HeadingType = {
@@ -45,6 +46,8 @@ export type MainInputType = {
   label?: string | ReactElement;
   maxLength?: number | undefined;
   restyle?: TextStyle;
+  multiline?: boolean | undefined;
+  autoFocus?: boolean | undefined;
 };
 
 export type ValidationType = {
@@ -70,8 +73,12 @@ export type FullImageType = {
   radius?: number;
 };
 
-export type loaderType = {
+export type IndicatorType = {
   visible: boolean;
   isError?: boolean;
   message?: string;
+};
+
+export type MainHeaderType = {
+  title: string;
 };

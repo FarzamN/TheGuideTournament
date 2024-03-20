@@ -1,4 +1,13 @@
-import {Login, Register} from '../screen/auth';
+import {Login, Register, ForgetPassword} from '../screen/auth';
+import {Home} from '../screen/user';
+
+export const AuthArr = [
+  {n: 'login', c: Login},
+  {n: 'register', c: Register},
+  {n: 'forgetPassword', c: ForgetPassword},
+];
+
+export const UserArr = [{n: 'home', c: Home}];
 
 export const OverboardButton = [
   {title: 'Get Started', path: 'register', reverse: true},
@@ -30,9 +39,4 @@ export const RegisterInput = [
     name: 'c_password',
     pw: true,
   },
-];
-
-export const AuthArr = [
-  {n: 'login', c: Login},
-  {n: 'register', c: Register},
 ];
