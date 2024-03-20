@@ -6,14 +6,14 @@ import {MainHeaderType} from '../../utils/type';
 import {useDispatch} from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {USER_DETAILS} from '../../redux/reducer/holder';
+import {logout} from '../../redux/actions/AuthAction';
 
 const MainHeader: FC<MainHeaderType> = props => {
   const {title} = props;
   const dispatch = useDispatch();
 
-  const handleLogout = async () => {
-    dispatch({type: USER_DETAILS, payload: false});
-    await AsyncStorage.removeItem('user_details');
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   return (

@@ -1,14 +1,15 @@
 import {StyleSheet} from 'react-native';
+import {Font} from '../../utils/font';
 
 export default StyleSheet.create({
   Heading: {
     fontSize: 20,
     color: '#fff',
-    fontWeight: 'bold',
+    fontFamily: Font.font700,
   },
   Sub: {
     fontSize: 15,
     color: '#fff',
-    fontWeight: '400',
+    fontFamily: Font.font600Italic,
   },
 });

@@ -76,3 +76,10 @@ export const RegisterApi = (data, setFun) => {
     }
   };
 };
+
+export const logout = () => {
+  return async dispatch => {
+    dispatch({type: USER_DETAILS, payload: false});
+    await AsyncStorage.removeItem('user_details');
+  };
+};

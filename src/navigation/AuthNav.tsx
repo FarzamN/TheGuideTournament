@@ -10,7 +10,7 @@ const AuthNav: FC = () => {
     <NavigationContainer>
       <Navigator
         initialRouteName={AuthArr[0].n}
-        screenOptions={{headerShown: false, animation: 'ios'}}>
+        screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         {AuthArr.map(({n, c}) => (
           <Screen name={n} component={c} key={n} />
         ))}

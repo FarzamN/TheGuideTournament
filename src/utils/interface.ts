@@ -15,14 +15,15 @@ export interface nif {
   route: any;
 }
 
-export interface AuthInterface {
-  userData: any | null;
-  newData: any | null;
-  isLoading: boolean;
-  isSuccess: boolean;
-  isError: boolean;
+export interface HomeSwitchInterface {
+  i: number;
+  focus: boolean;
+  onPress: () => void;
+  data: {title: string};
 }
-export interface LoginForm {
-  email: string;
-  password: string;
+
+export interface HomeCardInterface {
+  i: number;
+  onPress: () => void;
+  data: {title: string};
 }

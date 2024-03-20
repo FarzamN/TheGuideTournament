@@ -9,34 +9,12 @@ export const AuthArr = [
 
 export const UserArr = [{n: 'home', c: Home}];
 
-export const OverboardButton = [
-  {title: 'Get Started', path: 'register', reverse: true},
-  {title: 'I already have an account', path: 'login', reverse: false},
+export const HomeSwitchData = [
+  {title: 'Tournaments', id: 1},
+  {title: 'Ministeries', id: 2},
 ];
 
-export const LoginInput = [
-  {icon: 'email', p: 'Email', name: 'email'},
-  {icon: 'form-textbox-password', p: 'Password', name: 'password'},
-];
-export const ChangePasswordInput = [
-  {p: 'Password', name: 'password'},
-  {p: 'Confirm Password', name: 'c_password'},
-];
+export const blue = ['#79b5fc', '#53a0fb', '#3f96fb'];
+export const orange = ['#f79e6e', '#f57d3d', '#F58245'];
 
-export const RegisterInput = [
-  {icon: 'account', p: 'Full Name', name: 'name'},
-  {icon: 'email', p: 'Email', name: 'email'},
-  {icon: 'phone', p: 'Phone Number', name: 'number'},
-  {
-    icon: 'form-textbox-password',
-    p: 'Password',
-    name: 'password',
-    pw: true,
-  },
-  {
-    icon: 'form-textbox-password',
-    p: 'Confirm Password',
-    name: 'c_password',
-    pw: true,
-  },
-];
+export const HomeData = ['#79b5fc', '#f79e6e', '#3f96fb'];

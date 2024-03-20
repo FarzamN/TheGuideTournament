@@ -10,6 +10,8 @@ import ImagePickerModal from './Modal/ImagePickerModal';
 import FullImage from './Helper/FullImage';
 import Indicator from './Modal/Indicator';
 import MainHeader from './Header/MainHeader';
+import HomeSwitch from './Cards/HomeSwitch';
+import HomeCard from './Cards/HomeCard';
 
 export {
   Body,
@@ -24,4 +26,6 @@ export {
   FullImage,
   Indicator,
   MainHeader,
+  HomeSwitch,
+  HomeCard,
 };
