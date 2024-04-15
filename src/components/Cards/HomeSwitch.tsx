@@ -5,6 +5,7 @@ import {TouchableOpacity} from 'react-native';
 import {HomeSwitchInterface as hsi} from '../../utils/interface';
 import LinearGradient from 'react-native-linear-gradient';
 import {blue, orange} from '../../utils/Data';
+import {Color} from '../../utils/Color';
 
 const HomeSwitch: FC<hsi> = ({data, focus, onPress, i}) => {
   const {title} = data;
@@ -20,8 +21,8 @@ const HomeSwitch: FC<hsi> = ({data, focus, onPress, i}) => {
         start={{x: 0, y: 0}}
         end={{x: 0.4, y: 1.25}}
         colors={focus ? orange : blue}
-        style={style.HomeContainer}>
-        <Sub text={title} center onPress={onPress} />
+        style={style.HomeSwitch}>
+        <Sub text={title} center onPress={onPress} color={Color.White} />
       </LinearGradient>
     </TouchableOpacity>
   );

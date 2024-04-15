@@ -25,5 +25,6 @@ export interface HomeSwitchInterface {
 export interface HomeCardInterface {
   i: number;
   onPress: () => void;
+  onShare: () => void;
   data: {title: string};
 }

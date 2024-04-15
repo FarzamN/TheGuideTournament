@@ -50,7 +50,6 @@ export const GlobalStyle = StyleSheet.create({
     textShadowRadius: 10,
   },
   MapContainer: {
-    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',

@@ -4,13 +4,17 @@ import styles from './style';
 import {HeadingType} from '../../Utils/type';
 
 const Sub: FC<HeadingType> = props => {
-  const {text, style, center, marginTop, onPress} = props;
+  const {text, style, center, marginTop, onPress, color} = props;
   return (
     <TouchableOpacity activeOpacity={1} onPress={onPress}>
       <Text
         style={[
           styles.Sub,
-          {textAlign: center ? 'center' : 'left', marginTop: marginTop},
+          {
+            color: color,
+            textAlign: center ? 'center' : 'left',
+            marginTop: marginTop,
+          },
           style,
         ]}>
         {text}

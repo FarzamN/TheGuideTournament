@@ -17,4 +17,4 @@ export const HomeSwitchData = [
 export const blue = ['#79b5fc', '#53a0fb', '#3f96fb'];
 export const orange = ['#f79e6e', '#f57d3d', '#F58245'];
 
-export const HomeData = ['#79b5fc', '#f79e6e', '#3f96fb'];
+export const HomeData = ['#79b5fc', '#f79e6e', '#3f96fb', '#f1f', '#1f1'];

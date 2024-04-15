@@ -31,6 +31,7 @@ export type HeadingType = {
   center?: boolean;
   marginTop?: number;
   onPress?: () => void;
+  color: string;
 };
 
 export type MainInputType = {

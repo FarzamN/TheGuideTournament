@@ -32,10 +32,12 @@ const Home: FC = () => {
           />
         ))}
       </View>
+
       <FlatList
         data={HomeData}
-        keyExtractor={(_, i) => i.toString()}
-        renderItem={({item, index}) => <HomeCard data={item} />}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(_, ix) => ix.toString()}
+        renderItem={({item, index}) => <HomeCard data={item} i={index} />}
       />
     </Body>
   );

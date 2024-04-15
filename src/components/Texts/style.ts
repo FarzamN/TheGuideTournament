@@ -9,7 +9,6 @@ export default StyleSheet.create({
   },
   Sub: {
     fontSize: 15,
-    color: '#fff',
     fontFamily: Font.font600Italic,
   },
 });

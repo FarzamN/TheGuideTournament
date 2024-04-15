@@ -9,5 +9,7 @@ export const Color = {
   Yellow: '#ECB365',
   Non: 'transparent',
   DarkBlue: '#262F77',
+  LightPink: '#FF7F7E',
+  LightBlue: '#5791F0',
   placeholderTextColor: 'lightgrey',
 };
