@@ -1,5 +1,7 @@
 import {Login, Register, ForgetPassword} from '../screen/auth';
 import {Home} from '../screen/user';
+import PlayGame from '../screen/user/PlayGame';
+import WaitingRoom from '../screen/user/WaitingRoom';
 
 export const AuthArr = [
   {n: 'login', c: Login},
@@ -7,7 +9,11 @@ export const AuthArr = [
   {n: 'forgetPassword', c: ForgetPassword},
 ];
 
-export const UserArr = [{n: 'home', c: Home}];
+export const UserArr = [
+  {n: 'home', c: Home},
+  {n: 'waitingroom', c: WaitingRoom},
+  {n: 'playgame', c: PlayGame},
+];
 
 export const HomeSwitchData = [
   {title: 'Tournaments', id: 1},

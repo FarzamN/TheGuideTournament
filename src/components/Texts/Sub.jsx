@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import styles from './style';
 import {HeadingType} from '../../Utils/type';
 
-const Sub: FC<HeadingType> = props => {
+const Sub = props => {
   const {text, style, center, marginTop, onPress, color} = props;
   return (
     <TouchableOpacity activeOpacity={1} onPress={onPress}>

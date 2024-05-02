@@ -26,13 +26,14 @@ export default StyleSheet.create({
   WhiteBanner: {
     backgroundColor: 'white',
     // height: 20,
-    paddingVertical: 5,
+    paddingVertical: 8,
     paddingHorizontal: 15,
   },
   BannerText: {
     color: Color.LightBlue,
-    fontSize: 18,
-    fontFamily: Font.font600,
+    fontSize: 21,
+    fontFamily: Font.font700,
+    textTransform: 'uppercase'
   },
   ShareIconBox: {
     backgroundColor: Color.LightPink,

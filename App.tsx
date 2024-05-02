@@ -11,7 +11,12 @@ const App = () => {
     SplashScreen.hide();
   }, 300);
 
-  return <>{userDetail ? <UserNav /> : <AuthNav />}</>;
+  return <>{
+    // userDetail ? 
+    <UserNav />
+    // : 
+    // <AuthNav />
+    }</>;
 };
 
 export default App;

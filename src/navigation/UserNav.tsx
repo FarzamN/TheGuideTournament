@@ -12,7 +12,12 @@ const UserNav: FC = () => {
         initialRouteName={UserArr[0].n}
         screenOptions={{headerShown: false, animation: 'ios'}}>
         {UserArr.map(({n, c}) => (
-          <Screen name={n} component={c} key={n} />
+          <Screen 
+          name={n} 
+          component={c}
+           key={n}
+           options={{ animation: 'slide_from_right' }}
+            />
         ))}
       </Navigator>
     </NavigationContainer>
