@@ -8,6 +8,7 @@ import TournPointCard from '../../components/Cards/TournPointCard';
 import QuestOptCard from '../../components/Cards/QuestOptCard';
 import TournTagCard from '../../components/Cards/TournTagCard';
 import RearrangeGame from '../../components/Game/RearrangeGame';
+import CancelHeader from '../../components/Header/CancelHeader';
 
 const PlayGame = ({ navigation }) => {
     const gameType = 'rearrange'
@@ -25,7 +26,7 @@ const PlayGame = ({ navigation }) => {
 
     const handleCancel = () => {
         // navigation.navigate('playgame')
-        // navigation.goBack()
+        navigation.goBack()
     }
     const handlePlayer1 = () => {
         const check = player1Detail.remaining_ans - 1
@@ -71,7 +72,10 @@ const PlayGame = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <StatusBar  backgroundColor={'#0947A8'} barStyle={'light-content'}/>
-            <View
+
+            <CancelHeader img onPress={() => handleCancel()} title='Family and friends tournament' />
+
+            {/* <View
                 style={{
                     height: 70,
                     backgroundColor: '#0947A8',
@@ -116,7 +120,7 @@ const PlayGame = ({ navigation }) => {
 
                     </TouchableOpacity>
                 </View>
-            </View>
+            </View> */}
 
             <LinearGradient
                 start={{ x: 0, y: 0 }}

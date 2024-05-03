@@ -1,5 +1,6 @@
 import {Login, Register, ForgetPassword} from '../screen/auth';
 import {Home} from '../screen/user';
+import ChooseMinistry from '../screen/user/ChooseMinistry';
 import PlayGame from '../screen/user/PlayGame';
 import WaitingRoom from '../screen/user/WaitingRoom';
 
@@ -13,6 +14,7 @@ export const UserArr = [
   {n: 'home', c: Home},
   {n: 'waitingroom', c: WaitingRoom},
   {n: 'playgame', c: PlayGame},
+  {n: 'chooseministry', c: ChooseMinistry},
 ];
 
 export const HomeSwitchData = [

@@ -9,8 +9,8 @@ import GradientBtn from '../../components/Buttons/GradientBtn'
 const WaitingRoom = ({ navigation }) => {
 
   const handleCancel = () => {
-    navigation.navigate('playgame')
-    // navigation.goBack()
+    // navigation.navigate('playgame')
+    navigation.goBack()
   }
 
   return (
