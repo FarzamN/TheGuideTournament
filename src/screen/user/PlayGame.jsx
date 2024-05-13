@@ -1,5 +1,5 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, PanResponder, Animated, StatusBar, ScrollView } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 import Icon, { IconType } from 'react-native-dynamic-vector-icons';
 import { Font } from '../../utils/font';
@@ -23,6 +23,38 @@ const PlayGame = ({ navigation }) => {
         level: 10,
         remaining_ans: 8
     })
+    const [seconds, setSeconds] = useState(300);
+    const animatedValue = useRef(new Animated.Value(0)).current;
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSeconds((prevSeconds) => {
+                if (prevSeconds === 0) {
+                    clearInterval(interval);
+                    return 0;
+                }
+                return prevSeconds - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        Animated.timing(animatedValue, {
+            toValue: 1,
+            duration: 1000,
+            useNativeDriver: true,
+        }).start();
+    }, [seconds]);
+
+    const restartTimer = () => {
+        setSeconds(300);
+        animatedValue.setValue(0);
+    };
+
+    const minutes = Math.floor(seconds / 60);
+    const displaySeconds = seconds % 60;
 
     const handleCancel = () => {
         // navigation.navigate('playgame')
@@ -71,56 +103,9 @@ const PlayGame = ({ navigation }) => {
     }
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <StatusBar  backgroundColor={'#0947A8'} barStyle={'light-content'}/>
+            <StatusBar backgroundColor={'#0947A8'} barStyle={'light-content'} />
 
             <CancelHeader img onPress={() => handleCancel()} title='Family and friends tournament' />
-
-            {/* <View
-                style={{
-                    height: 70,
-                    backgroundColor: '#0947A8',
-                    flexDirection: 'row',
-
-                }}
-            >
-                <View style={{ flex: .2, backgroundColor: 'black' }} ></View>
-                <View style={{ flex: .65, justifyContent: 'center', alignItems: 'center' }} >
-                    <Text
-                        style={{
-                            fontFamily: Font.font700,
-                            color: 'white',
-                            fontSize: 19,
-                            textTransform: 'uppercase',
-                            textAlign: 'center'
-                        }}
-                    >Family and friends tournament</Text>
-                </View>
-                <View style={{ flex: .15, justifyContent: 'center', alignItems: 'center' }} >
-                    <TouchableOpacity activeOpacity={0.8} onPress={() => handleCancel()} >
-                        <LinearGradient
-                            start={{ x: 0, y: 0 }}
-                            end={{ x: 0, y: 1.7 }}
-                            colors={['#F99C9E', '#BD3410', '#BD3410']}
-                            style={{
-                                height: 30,
-                                width: 30,
-                                elevation: 1,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                borderRadius: 3
-                            }}
-                        >
-                            <Icon
-                                size={25}
-                                name="cross"
-                                color={'white'}
-                                type={IconType.Entypo}
-                            />
-                        </LinearGradient>
-
-                    </TouchableOpacity>
-                </View>
-            </View> */}
 
             <LinearGradient
                 start={{ x: 0, y: 0 }}
@@ -151,8 +136,8 @@ const PlayGame = ({ navigation }) => {
                             }}
                         >
 
-                            <TournTimerCard text1={'04'} text2={'Min'} />
-                            <TournTimerCard text1={'40'} text2={'Sec'} />
+                            <TournTimerCard text1={minutes.toString().padStart(2, '0')} text2={'Min'} />
+                            <TournTimerCard text1={displaySeconds.toString().padStart(2, '0')} text2={'Sec'} />
 
                         </View>
                     </View>

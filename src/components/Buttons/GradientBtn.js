@@ -6,7 +6,7 @@ import { Font } from '../../utils/font'
 const GradientBtn = (props) => {
     const { join_tourn, title, onPress, mgTop ,restyle} = props
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
             <LinearGradient
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}

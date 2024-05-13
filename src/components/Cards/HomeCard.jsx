@@ -28,7 +28,7 @@ const HomeCard = ({ data, onPress, i, onShare }) => {
 
       <View style={[style.WhiteBanner, GlobalStyle.Space_Between]}>
         <Sub text={title} color={Color.Black} style={style.BannerText} />
-        <TouchableOpacity onPress={onShare} style={style.ShareIconBox}>
+        <TouchableOpacity activeOpacity={0.7} onPress={onShare} style={style.ShareIconBox}>
           <Icon
             size={15}
             color={Color.White}

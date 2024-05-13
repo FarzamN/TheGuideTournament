@@ -12,11 +12,11 @@ export default StyleSheet.create({
   HomeContainer: {
     height: 180,
     marginBottom: 15,
-    borderRadius: 10,
+    borderRadius: 6,
     overflow: 'hidden',
     marginHorizontal: 10,
-    borderTopLeftRadius: 0,
-    borderTopRightRadius: 0,
+    // borderTopLeftRadius: 0,
+    // borderTopRightRadius: 0,
   },
   HomeCardTitle: {
     color: 'white',
